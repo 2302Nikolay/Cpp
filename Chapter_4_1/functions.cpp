@@ -2,7 +2,7 @@
 
 double getNum()
 {
-	std::cout << "Ââåäèòå ÷èñëî >> ";
+	std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ >> ";
 	double num{};
 	std::cin >> num;
 	return num;
@@ -10,7 +10,7 @@ double getNum()
 
 char getChar()
 {
-	std::cout << "Ââåäèòå îïåğàòîğ (+, -, *, /) >> ";
+	std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¾Ğ¿ĞµÑ€Ğ°Ñ‚Ğ¾Ñ€ (+, -, *, /) >> ";
 	char ch{};
 	std::cin >> ch;
 	return ch;

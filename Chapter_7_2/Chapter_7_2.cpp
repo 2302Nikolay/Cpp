@@ -2,12 +2,17 @@
 
 int main()
 {
-    char ch{ 'a' };
-    while (ch <= 'z')
-    {
-        std::cout << ch << ' ' << static_cast<int>(ch) << '\n';
-        ++ch;
-    }
+	int count{ 5 };
+	while (count >= 1)
+	{
+		int num{ count };
+		while (num >= 1)
+		{
+			std::cout << num-- << ' ';
+		}
+		std::cout << '\n';
+		--count;
+	}
 
-    return EXIT_SUCCESS;
+	return EXIT_SUCCESS;
 }
