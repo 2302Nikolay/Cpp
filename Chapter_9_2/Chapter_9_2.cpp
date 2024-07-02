@@ -1,35 +1,16 @@
-﻿#include <iostream>
-
-struct Fraction
-{
-	int num{};
-	int denum{};
-};
-
-Fraction getFraction()
-{
-	Fraction temp{};
-	std::cout << "Введите числитель >> ";
-	std::cin >> temp.num;
-	std::cout << "Введите знаменатель >> ";
-	std::cin >> temp.denum;
-	std::cout << '\n';
-	return temp;
-}
-
-double multiply(Fraction num1, Fraction num2)
-{
-	return (static_cast<double>(num1.num * num2.num) / (num1.denum * num2.denum));
-}
+﻿#include "Header.h"
 
 int main()
 {
 	setlocale(LC_ALL, "rus");
 
-	Fraction num1{ getFraction() };
-	Fraction num2{ getFraction() };
+	Monster dragon{ MonsterType::dragon, "Матерь", 1000 };
+	Monster slime{ MonsterType::slime, "Масса Костей", 500 };
+	Monster spider{ MonsterType::spider, "Яглут", 800 };
 
-	std::cout << num1.num << '/' << num1.denum << " * " << num2.num << '/' << num2.denum << " = " << multiply(num1, num2) << '\n';
+	printMonster(dragon);
+	printMonster(slime);
+	printMonster(spider);
 
 	return EXIT_SUCCESS;
 }
