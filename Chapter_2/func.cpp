@@ -2,12 +2,12 @@
 int readNumber()
 {
 	int x{};
-	std::cout << "Ââåäèòå ÷èñëî >> ";
+	std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ >> ";
 	std::cin >> x;
 	return x;
 }
 
 void writeAnswer(int a)
 {
-	std::cout << "Îòâåò: " << a << '\n';
+	std::cout << "Ğ¡ÑƒĞ¼Ğ¼Ğ° Ñ‡Ğ¸ÑĞµĞ»: " << a << '\n';
 }

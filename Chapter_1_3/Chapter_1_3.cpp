@@ -2,13 +2,15 @@
 
 int main()
 {
-	std::cout << "Enter an integer: ";
+	setlocale(LC_ALL, "rus");
+	
+	std::cout << "Введите целое число: ";
 
 	int num{ 0 };
 	std::cin >> num;
 
-	std::cout << "Double " << num << " is: " << num * 2 << '\n';
-	std::cout << "Triple " << num << " is: " << num * 3 << '\n';
+	std::cout << "Удвоенное число " << num << " это: " << num * 2 << '\n';
+	std::cout << "Утроенное число " << num << " это: " << num * 3 << '\n';
 
 	return 0;
 }

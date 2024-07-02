@@ -3,7 +3,7 @@
 
 double getHeight()
 {
-	std::cout << "Ââåäèòå âûñîòó áàøíè >>";
+	std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ²Ñ‹ÑĞ¾Ñ‚Ñƒ Ğ±Ğ°ÑˆĞ½Ğ¸ >>";
 
 	double hight{};
 	std::cin >> hight;
@@ -23,9 +23,9 @@ double calcHeight(double height, int time)
 void printRes(double hight, int time)
 {
 	if (hight > 0.0)
-		std::cout << "Íà " << time << " ñåêóíäå áûë íà âûñîòå " << hight << " ìåòğîâ.\n";
+		std::cout << "ĞĞ° " << time << " ÑĞµĞºÑƒĞ½Ğ´Ğµ Ğ½Ğ°Ñ…Ğ¾Ğ´Ğ¸Ñ‚ÑÑ Ğ½Ğ° Ğ²Ñ‹ÑĞ¾Ñ‚Ğµ " << hight << " Ğ¼ĞµÑ‚Ñ€Ğ¾Ğ².\n";
 	else 
-		std::cout << "Íà " << time << " ñåêóíäå áûë íà çåìëå.\n";
+		std::cout << "ĞĞ° " << time << " ÑĞµĞºÑƒĞ½Ğ´Ğµ Ğ½Ğ° Ğ·ĞµĞ¼Ğ»Ğµ.\n";
 }
 
 void getRes(double height, int time)
