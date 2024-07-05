@@ -1,92 +1,15 @@
 #include <iostream>
-#include <utility>
-#include <functional>
-
-using ArithmeticFunction = std::function<int(std::pair<int, int>)>;
-
-int add(std::pair<int, int> num)
-{
-    return num.first + num.second;
-}
-
-int substract(std::pair<int, int> num)
-{
-    return num.first - num.second;
-}
-
-int multiply(std::pair<int, int> num)
-{
-    return num.first * num.second;
-}
-
-int division(std::pair<int, int> num)
-{
-    return num.first / num.second;
-}
-
-ArithmeticFunction getArithmeticFunction(char oper)
-{
-    switch (oper)
-    {
-    case '+':
-        return &add;
-    case '-':
-        return &substract;
-    case '*':
-        return &multiply;
-    case '/':
-        return &division;
-    default:
-        {
-            std::cout << "getArithmeticFunction(): Ошибка выбора операции. Вызвана функция по умолчанию: add()\n";
-            return &add;
-        }
-    }
-}
-
-
-std::pair<int, int> getNum()
-{
-    std::pair<int, int> value_pair{0, 0};
-
-    std::cout << "Введите первое число >> ";
-    std::cin >> value_pair.first;
-    std::cout << "Введите второе число >> ";
-    std::cin >> value_pair.second;
-    
-    return value_pair;
-}
-
-char getOper()
-{
-    bool flag{true};
-    char ch{};
-
-    while (flag)
-    {
-        std::cout << "Введите операцию [+, -, *, /] >> ";
-        std::cin >> ch;
-
-        if (ch=='+' || ch=='-' || ch=='*' || ch=='/')
-            flag = false;
-        else
-            std::cout << "Ошибка! Неправильный символ операции!\n";
-    }
-
-    return ch;
-    
-}
+#include "Header.h"
 
 int main()
 {
-    std::pair<int, int> num{getNum()};
+    std::pair<int, int> num{getNum()};                  // Получаем от пользователя пару чисел
 
-    char oper{getOper()};
+    char oper{getOper()};                               // Получаем от пользователя символ операции
 
-    //ArithmeticFunction af{getArithmeticFunction(oper)};
-    ArithmeticFunction af{getArithmeticFunction('?')};
+    ArithmeticFunction af{getArithmeticFunction(oper)}; // Получаем ссылку на соотвествующую символу операции функцию
 
-    std::cout << "Результат: " << af(num) << '\n';
+    std::cout << "Результат: " << af(num) << '\n';      // Вывод результата
 
     return 0;
 }
