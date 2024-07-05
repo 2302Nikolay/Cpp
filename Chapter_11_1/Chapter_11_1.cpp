@@ -12,7 +12,7 @@ int main()
     std::cout << "\n\n" << "Вопрос 2: \n" << sumNum(93427) << '\n';
     std::cout << '\n' << "Вопрос 3: \n";
     binaryRepres(125);
-    std::cout << "\n\n" << "Вопрос 4: \n";
+    std::cout << '\n';
 
     return 0;
 }
