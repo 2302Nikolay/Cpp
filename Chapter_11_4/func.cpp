@@ -41,7 +41,7 @@ std::vector<int> generateNum(int start, int count, int rand_mult)
 int getGuess()
 {
     int guess{};
-    std::cout << "Введите чиссло >> ";
+    std::cout << "Введите число >> ";
     std::cin >> guess;
     return guess;
 }
@@ -73,21 +73,20 @@ int findCloses(std::vector<int>& array, int guess)
 
 void printGood(std::vector<int>::size_type size)
 {
-    (size == 0) ? (std::cout << "Верно! Вы выиграли!\n") : (std::cout << "Верно! Осталось отгадать " << size << " чисел...\n");
+    (size == 0) ? (std::cout << "\x1b[1;32m Верно! Вы выиграли! \x1b[0m \n") : (std::cout << "\x1b[1;32m Верно! Осталось отгадать \x1b[0m" << size << "\x1b[1;32m чисел...\x1b[0m \n");
 }
 
 void printBad(std::vector<int>& arr, int guess)
 {
     int closes{findCloses(arr, guess)};
 
-    (std::abs(closes - guess) <= project_configuration::maximumWrongAnswer) ? (std::cout << "Ответ не верный! В следующий раз попробуйте число " << closes << '\n') : (std::cout << "Ответ не верный!\n"); //////////////////////////////////////// !!!
+    (std::abs(closes - guess) <= project_configuration::maximumWrongAnswer) ? (std::cout << "\x1b[1;33m Ответ не верный! В следующий раз попробуйте число \x1b[0m " << closes << '\n') : (std::cout << "\x1b[1;31m Ответ не верный!\x1b[0m\n"); 
 }
 
 bool play(std::vector<int>& array)
 {
     int guess{getGuess()};
 
-    
     if (checkNum(array, guess))
     {
         printGood(array.size());

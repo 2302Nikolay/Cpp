@@ -7,13 +7,18 @@
 namespace project_configuration
 {
     /// @brief Минимальное значение для генерации множителя
-    static int multiplierMin{ 2 };
+    extern int multiplierMin;
     /// @brief Максимальное значение для генерации множетеля
-    static int multiplierMax{ 4 };
+    extern int multiplierMax;
     /// @brief Допустимая ошибка для подсказки
-    static int maximumWrongAnswer{ 4 };
+    extern int maximumWrongAnswer;
 }
 
-bool parseCmdLine(std::vector<std::string>& cmdargs_array, const char *argv[], int size);
+/// @brief Парсит аргументы командной строки
+/// @param argv Массив аргументов коммандной строки
+/// @param size Размер массива аргументов командной строки
+/// @return true - введены аргументы -mMin и/или -mMax, при этом -mMin <= -mMax
+/// false - введены аргументы -mMin и/или -mMax, при этом -mMin >= -mMax, или введён аргумент -h / --help
+bool parseCmdLine(char* argv[], int size);
 
 #endif

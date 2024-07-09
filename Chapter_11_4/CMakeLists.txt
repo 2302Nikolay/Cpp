@@ -2,4 +2,4 @@ cmake_minimum_required(VERSION 3.10)
 
 project(test LANGUAGES CXX)
 
-add_executable(test Chapter_11_4.cpp func.cpp)
+add_executable(test Chapter_11_4.cpp func.cpp Config.cpp)
